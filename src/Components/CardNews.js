@@ -43,7 +43,43 @@ class CardNews extends HTMLElement {
     }
 
     styles(){
+        const style = document.createElement("style");
+        style.textContent = `
+            .card{
+                width: 80%;
+                display: flex;
+                flex-direction: row;
+                box-shadow: 9px 9px 27px 0px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 9px 9px 27px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 9px 9px 27px 0px rgba(0,0,0,0.75);
+                justify-content: space-between;
+            }
+            
+            .cardleft{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 10px;
+            }
+            
+            .cardleft > span{
+                font-weight: 400;
+            }
+            
+            .cardleft > a{
+                margin-top: 15px;
+                font-size: 25px;
+                color: #000;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            
+            .cardleft > p{
+                color: rgb(70, 70, 70);
+            }
+        `;
 
+        return style;
     }
 }
 
